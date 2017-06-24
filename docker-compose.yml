@@ -1,0 +1,21 @@
+version: '2'
+services:
+    app:
+        restart: always
+        build: ./mainweb
+        networks:
+            - mainnet
+    nginx:
+        restart: always
+        build: ./nginx
+        networks:
+            - mainnet
+        links:
+            - app
+        volumes:
+            - ./mainweb/static:/usr/share/nginx/html
+        ports:
+            - "80:8080"
+networks:
+    mainnet:
+
