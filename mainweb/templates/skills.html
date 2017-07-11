@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+	<title>Skills page</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather" />
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+	<script type="text/javascript" src="assets/js/animateColours.js"></script>
+</head>
+<body class="page">
+	<svg version="1.1" style="display: none;"
+		 xmlns="http://www.w3.org/2000/svg" 
+		 xmlns:xlink="http://www.w3.org/1999/xlink">
+		<symbol id="triangle-left-blog" viewbox="0 0 10 20">
+			<path d="M10 0L0 10L10 20z" fill="#539ABD"></path>
+		</symbol>
+		<symbol id="triangle-right-home" viewbox="0 0 10 20">
+			<path d="M0 0L10 10L0 20z" fill="#6553BD"></path>
+		</symbol>
+	</svg>
+	<header class="main-nav center skills">
+		<a href="index.html" class="main-nav-icons boxshadow website-logo">
+		</a>
+		<a href="skills.html" class="main-nav-icons boxshadow">
+			<svg class="icon triangle-left"><use xlink:href="#triangle-left-blog" /></svg>
+		</a>
+		<a href="#" class="main-nav-icons">
+			<svg class="icon boxshadow" 
+				 xmlns="http://www.w3.org/2000/svg"
+				 xmlns:xlink="http://www.w3.org/1999/xlink"
+				 viewBox="10 10 20 30">
+				 <title>Link to home page</title>
+				 <g>
+					<path d="M20 10 10,20 10,30 20,40 30,30 30,20Z" fill="#9A53BD"></path>
+					<image x="10" y="20" width="20" height="10" xlink:href="assets/img/skills.png"></image>
+				 </g>
+			</svg>
+		</a>
+		<a href="blog.html" class="main-nav-icons boxshadow">
+			<svg class="icon triangle-right"><use xlink:href="#triangle-right-home" /></svg>
+		</a>
+	</header>
+	<section class="content skills">
+		<figure id="languages">
+			<div class="language-pie-chart">
+				<svg xmlns="http://www.w3.org/2000/svg"
+					 xmlns:xlink="http://www.w3.org/1999/xlink"
+					 width="100%" height="100%" viewBox="0 0 36 36">
+					 <circle class="hole" cx="18" cy="18" r="15.91549430918952" 
+					 fill="#ffffff"></circle>
+					 <circle class="ring" cx="18" cy="18" r="15.91549430918952" 
+					 fill="transparent" stroke="#000000" stroke-width="3"></circle>
+
+					 <!-- segments -->
+					 <!-- formula taken from https://medium.com/@heyoka/scratch-made-svg-donut-pie-charts-in-html5-2c587e935d72 
+						Circumference − All preceding segments’ total length + First segment’s offset = Current segment offset
+					 -->
+					 <circle class="segment" cx="18" cy="18" r="15.91549430918952" 
+					 fill="transparent" stroke="#8B0000" stroke-width="3" 
+					 stroke-dasharray="16 84" stroke-dashoffset="20"></circle>
+					 <circle class="segment" cx="18" cy="18" r="15.91549430918952" 
+					 fill="transparent" stroke="#006400" stroke-width="3" 
+					 stroke-dasharray="40 60" stroke-dashoffset="104"></circle>
+					 <circle class="segment" cx="18" cy="18" r="15.91549430918952" 
+					 fill="transparent" stroke="#997300" stroke-width="3" 
+					 stroke-dasharray="12 88" stroke-dashoffset="64"></circle>
+					 <circle class="segment" cx="18" cy="18" r="15.91549430918952" 
+					 fill="transparent" stroke="#8a8a5c" stroke-width="3" 
+					 stroke-dasharray="20 80" stroke-dashoffset="52"></circle>
+
+					 <g class="language-pie-chart-text">
+					 	<text class="inner-text" x="50%" y="50%">What I know</text>
+					 </g>
+				</svg>
+			</div>
+			<figcaption id="legend">
+				<ul>
+					<li class="to-sides">
+						<span class="language-percent-image java center"><p>16%</p></span>
+						<span class="language-desc text"><p>Java</p></span>
+					</li>
+					<li class="to-sides">
+						<span class="language-percent-image python center"><p>40%</p></span>
+						<span class="language-desc text"><p>Python</p></span>
+					</li>
+					<li class="to-sides">
+						<span class="language-percent-image ccplus center"><p>12%</p></span>
+						<span class="language-desc text"><p>C/C++</p></span>
+					</li>
+					<li class="to-sides">
+						<span class="language-percent-image web center"><p>20%</p></span>
+						<span class="language-desc text"><p>HTML/CSS/JS</p></span>
+					</li>
+					<li class="to-sides">
+						<span class="language-percent-image sql center"><p>12%</p></span>
+						<span class="language-desc text"><p>SQL</p></span>
+					</li>
+				</ul>
+			</figcaption>
+		</figure>
+		<section id="download-button">
+			<a href="https://drive.google.com/file/d/0Bzakom95GlgqaGFOWWVtcEtSTXc/view?usp=sharing" class="cv center">
+					<span id="download-button-text"><p>MY RESUME(PDF)</p></span>
+					<span class="resume-download-icon"></span>
+			</a>	
+		</section>
+		<section class="toolbox">
+			<section class="center toolbox-software">
+				<h2>What I use</h2>
+				<ul>
+					<li class="center"><p>Flask</p></li>
+					<li class="center"><p>Qt</p></li>
+					<li class="center"><p>ReactJS/React Native</p></li>
+					<li class="center"><p>Git</p></li>
+					<li class="center"><p>Android</p></li>
+					<li class="center"><p>Docker</p></li>
+					<li class="center"><p>Bootstrap</li>
+				</ul>
+			</section>
+			<section class="center toolbox-projects">
+				<h2>What I have done</h2>
+				<ul>
+					<li class="to-sides">
+						<span class="project-image"></span>
+						<span class="project description">
+							<h3>Websites</h3>
+							<p></p>
+						</span>
+					</li>
+					<li class="to-sides">
+						<span class="project-image"></span>
+						<span class="project description">
+							<h2></h2>
+							<p></p>
+						</span>
+					</li>
+				</ul>
+			</section>
+		</section>	
+	</section>
+</body>
+</html>
