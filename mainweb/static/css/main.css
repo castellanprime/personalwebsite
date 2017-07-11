@@ -1,0 +1,420 @@
+/*
+ *	full.css
+ *
+ */
+
+/* home colour: / #6553bd; */
+/* list colour: / #9a53bd; */
+/* blog colour: / #539abd; */
+
+
+/** General CSS */
+
+html, .page{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.center{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.to-sides{
+	display:flex;
+	justify-content: space-between;
+}
+
+.boxshadow{
+	-webkit-filter:drop-shadow(0 0 2.5rem rgba(0, 0, 0, 0.8));
+	-moz-filter: drop-shadow(0 0 2.5rem rgba(0, 0, 0, 0.8));
+	filter: drop-shadow(0 0 2.5rem rgba(0, 0, 0, 0.8));
+}
+
+
+.page{
+	background: url('../img/bg_img.svg');
+	background-repeat:space;
+	background-attachment: fixed;
+	flex-direction: column;
+	display:flex;
+}
+
+/*** CSS for index page***/
+
+.hex{
+	cursor: pointer;
+	stroke:#000000;
+	stroke-width:0.2;
+}
+
+
+.placeholder{
+	width:90%;
+	height:90%;
+}
+
+.icon{
+	width:100%;
+	height:100%;
+}
+
+/** CSS for all pages **/
+.skills{
+	background:#9A53BD;
+}
+
+.blog{
+	background:#539ABD;
+}
+
+.home{
+	background:#6553BD; 
+}
+
+.main-nav{
+	height:10rem;
+	width:100%;
+	flex:none;
+}
+
+.main-nav-icons{
+	height:7rem;
+	width:20%;
+}
+
+.website-logo{
+	background:url('../img/website_logo.svg');
+	background-repeat:no-repeat;
+	background-size: contain;
+	background-position: center center;
+}
+
+.content{
+	flex:1;
+	margin-right:10%;
+	margin-left:10%;
+	margin-top:0.2rem;
+	flex-direction: column;
+}
+
+
+/** CSS styles for home page **/
+
+.herotext{
+	color:#FFFFFF;
+	font-size: 1rem;
+	margin:0;
+	padding:0;
+}
+
+.text{
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	font-family: Merriweather, serif;
+}
+
+.spantext{
+	font-size: 0.7rem;
+}
+
+.lowerspantext{
+	font-size: 0.5rem;
+}
+
+span a{
+	text-decoration: none;
+}
+
+span a:link{
+	color:#000000;
+}
+
+footer{
+	flex:none;
+}
+
+/** CSS for skills page **/
+.java{
+	background:#8B0000;	/*darkred*/
+}
+
+.python{
+	background:#006400; /*darkgreen*/
+}
+
+.ccplus{
+	background:#997300; /*darkyellow*/
+}
+
+.web{
+	background:#8a8a5c; /*lightbrown*/ 
+}
+
+.sql{
+	background:#000000; /*black*/
+}
+
+#languages{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	margin:5%;
+	padding:1%;
+	border:1px solid #000;
+}
+
+.langauge-pie-chart{
+	flex:1;
+	padding-left:2%;
+	padding-right:2%;
+	border:1px solid #000000;
+}
+
+.language-pie-chart svg{
+	height: auto;
+}
+
+.language-pie-chart-text{
+	-moz-transform: translateY(0.25em);
+    -ms-transform: translateY(0.25em);
+    -webkit-transform: translateY(0.25em);
+	transform: translateY(0.25em);
+}
+
+.inner-text{
+	font-size: 0.3rem;
+	line-height: 1;
+	text-anchor: middle;
+    -moz-transform: translateY(-0.25em);
+    -ms-transform: translateY(-0.25em);
+    -webkit-transform: translateY(-0.25em);
+	transform: translateY(-0.25em);
+}
+
+#legend ul{
+	display:flex;
+	flex-flow: row wrap;
+	padding:0;
+	margin:0;
+}
+
+#legend ul li{
+	flex-flow: row nowrap;
+	margin-left:4%;
+	margin-right:4%;
+}
+
+#legend ul li:last-child{
+	margin-right:0;
+}
+
+#legend ul li:last-child > span:nth-of-type(1){
+	color:#FFFFFF;
+}
+
+.language-percent-image{
+	width:16vmin;
+	height:10vmin;
+	align-self: center;
+	-webkit-box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em,
+						inset rgba(0,0,0,0.15) 0 -0.1em .3em,
+						hsl(0, 0%, 60%) 0 .1em 3px,
+						hsl(0, 0%, 45%) 0 .3em 1px,
+						rgba(0,0,0,0.2) 0 .5em 5px;
+	   -moz-box-shadow:	inset rgba(255,254,255,0.6) 0 0.3em .3em,
+						inset rgba(0,0,0,0.15) 0 -0.1em .3em,
+						hsl(0, 0%, 60%) 0 .1em 3px,
+						hsl(0, 0%, 45%) 0 .3em 1px,
+						rgba(0,0,0,0.2) 0 .5em 5px;
+			box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em,
+						inset rgba(0,0,0,0.15) 0 -0.1em .3em,
+						hsl(0, 0%, 60%) 0 .1em 3px,
+						hsl(0, 0%, 45%) 0 .3em 1px,
+						rgba(0,0,0,0.2) 0 .5em 5px;
+	color:#FFFFFF;
+}
+
+#download-button{
+	height:5%;
+	margin:5%;
+	padding:1%;
+	display:flex;
+	justify-content: center;
+}
+
+.cv{
+	width:75%;
+	-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px #20538D;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: #4479BA;
+    color: #FFF;
+    padding:8px 12px;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+#download-button-text{
+	width:60%;
+	height:90%;
+	display: flex;
+	align-items: center;
+}
+
+.resume-download-icon{
+	height:90%;
+	width:15%;
+	background:url('../img/file_download.svg');
+	background-repeat:no-repeat;
+	background-size: contain;
+	background-position: center center;
+}
+
+.toolbox{
+	margin:5%;
+	padding:1%;
+	display:flex;
+	flex-direction:column;
+	border:1px solid #000;
+}
+
+.toolbox-software, .toolbox-projects{
+	width:100%;
+	flex-direction: column;
+	border:1px solid #000;
+}
+
+.toolbox-software h2, .toolbox-projects h2{
+	font-size: 3rem;
+	margin-top:.8rem;
+	margin-bottom:.8rem;
+}
+
+.toolbox-software ul{
+	margin:0;
+	padding:0;
+	font-size: 1rem;
+	list-style-type: none;
+}
+
+.toolbox-software ul li{
+	height:3rem;
+	background:#fff;
+	margin-top:.3rem;
+	margin-bottom:.3rem;
+}
+
+
+/** CSS Styles for 404 */
+.not-found h1{
+	font-size:6rem;
+	margin-bottom:1rem;
+}
+
+#sorry{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height:20%;
+	width:100%;
+}
+
+
+#sorry-icon{
+	height:100%;
+	width:15%;
+	background:url('../img/sorry.png');
+	background-repeat:no-repeat;
+	background-size: contain;
+	background-position: center center;
+}
+
+@media (min-width: 400px){
+	.placeholder{
+		width:60%;
+		height:60%;
+	}
+
+	.main-nav-icons{
+		height:9rem;
+	}
+
+	.herotext{
+		font-size: 3rem;
+	}
+
+	.spantext{
+		font-size: 2rem;
+	}
+
+	.lowerspantext{
+		font-size: 1rem;
+	}
+
+	#languages{
+		flex-direction: row;
+	}
+
+	#legend{
+		width:35%;
+	}
+
+	#legend ul{
+		flex-flow:column nowrap;
+	}
+
+	#legend ul li{
+		width:92%;
+	}
+
+	.language-percent-image{
+		width:12vmin;
+		height:8vmin;
+		font-size:1.5rem;
+	}
+
+	/* target every second span that is a child of its parent*/
+	#legend ul li span:nth-child(2){
+		font-size:1.5rem;
+	}
+
+	#download-button{
+		height:10%;
+	}
+
+	.cv{
+		font-size: 1.5rem;
+		width:45%;
+	}
+
+	.toolbox{
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.toolbox-software{
+		width:30%;
+	}
+
+	.toolbox-projects{
+		width:65%;
+	}
+
+	.not-found h1{
+		font-size:14rem;
+	}
+
+	#sorry p{
+		font-size: 4rem;
+	}
+}
+
