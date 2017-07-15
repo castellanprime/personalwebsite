@@ -6,11 +6,11 @@ app=Flask(__name__)
 def index():
 	return render_template('index.html')
 
-@app.route('/home')
+@app.route('/home/')
 def home():
 	return render_template('home.html')
 
-@app.route('/skills')
+@app.route('/skills/')
 def skills():
 	return render_template('skills.html')
 
