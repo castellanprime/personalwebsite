@@ -1,15 +1,265 @@
 <!doctype html>
 <html>
 <head>
-	<title>Skills page</title>
+	<title>Skills Page</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather" />
-	<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
-	<script type="text/javascript" src="assets/js/animateColours.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Special+Elite|Poiret+One" />
+	<script type="text/javascript" src="assets/js/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="assets/js/animateScroll.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/website.css" />
+	<style type="text/css">
+		.subcontent:nth-of-type(2){
+			height:33rem;
+		}
+
+		.subcontent:nth-of-type(3){
+			height:200rem;
+		}
+
+		.java{
+			background:#8B0000;	/*darkred*/
+		}
+
+		.python{
+			background:#006400; /*darkgreen*/
+		}
+
+		.ccplus{
+			background:#997300; /*darkyellow*/
+		}
+
+		.web{
+			background:#8a8a5c; /*lightbrown*/ 
+		}
+
+		.sql{
+			background:#000000; /*black*/
+		}
+
+		#language-pie-chart{
+			width:100%;
+			height:30%;
+		}
+
+		#pie-chart-text{
+			-moz-transform: translateY(0.25em);
+		    -ms-transform: translateY(0.25em);
+		    -webkit-transform: translateY(0.25em);
+			transform: translateY(0.25em);
+		}
+
+		#inner-text{
+			font-size: 0.3rem;
+			line-height: 1;
+			text-anchor: middle;
+		    -moz-transform: translateY(-0.25em);
+		    -ms-transform: translateY(-0.25em);
+		    -webkit-transform: translateY(-0.25em);
+			transform: translateY(-0.25em);
+		}
+
+		.legend{
+			height:40%;
+		}
+
+		.language-list{
+			padding:0;
+			margin:0;
+			display:flex;
+			flex-flow:row wrap;
+			list-style-type: none;
+			height:100%;
+		}	
+
+		.language-list li{
+			width:30%;
+			display:flex;
+		}
+
+		.language-list li{
+			margin:5%;
+		}
+
+		.language-list li:nth-of-type(4){
+			margin-right: 20%;
+		}
+
+		.language-desc{
+			font-family:"Poiret One", cursive;
+			font-weight: bold;
+		}
+
+		.language-percent-image{
+			color:#fff;
+			-webkit-box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em,
+									inset rgba(0,0,0,0.15) 0 -0.1em .3em,
+									hsl(0, 0%, 60%) 0 .1em 3px,
+									hsl(0, 0%, 45%) 0 .3em 1px,
+									rgba(0,0,0,0.2) 0 .5em 5px;
+				   -moz-box-shadow:	inset rgba(255,254,255,0.6) 0 0.3em .3em,
+									inset rgba(0,0,0,0.15) 0 -0.1em .3em,
+									hsl(0, 0%, 60%) 0 .1em 3px,
+									hsl(0, 0%, 45%) 0 .3em 1px,
+									rgba(0,0,0,0.2) 0 .5em 5px;
+						box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em,
+									inset rgba(0,0,0,0.15) 0 -0.1em .3em,
+									hsl(0, 0%, 60%) 0 .1em 3px,
+									hsl(0, 0%, 45%) 0 .3em 1px,
+									rgba(0,0,0,0.2) 0 .5em 5px;
+		}
+
+		#software{
+			display:flex;
+			flex-direction: column;
+		}
+
+		#software h3{
+			align-self: center;
+			font-size: 2rem;
+			font-family:"Special Elite", cursive;
+			margin-bottom: 0;
+		}
+
+		#software ul{
+			display: flex;
+			flex-flow: row wrap;
+			list-style-type: none;
+			padding:5%;
+		}
+
+		#software ul li{
+			width:25%;
+			font-family:"Poiret One", cursive;
+			font-weight: bold;
+		}
+
+		#software ul li:hover{
+			color:#fff;
+		}
+
+		.space{
+			width:100%;
+			margin-top:5rem;
+			margin-bottom: 0;
+		}
+
+		#third-box h3{
+			margin-top:0;
+			margin-right:2rem;
+			margin-left:2rem;
+			font-size: 2rem;
+			font-family:"Special Elite", cursive;
+		}
+
+		#side-projects{
+			width:100%;
+			padding:0;
+			list-style-type: none;
+		}
+
+		#side-projects li{
+			display:flex;
+			flex-direction:column;
+			height:30rem;
+			width:100%;
+		}
+
+		.project-image{
+			height:10rem;
+			margin-right:1.5rem;
+			margin-left:1.5rem;
+			margin-bottom:0.5rem;
+		}
+
+		.shadowbox{
+			-webkit-box-shadow:0 0 2.5rem rgba(0, 0, 0, 0.8);
+			-moz-box-shadow:0 0 2.5rem rgba(0, 0, 0, 0.8);
+			box-shadow:0 0 2.5rem rgba(0, 0, 0, 0.8);
+		}
+
+		.project-description{
+			height:12rem;
+			margin-right:1.5rem;
+			margin-left:1.5rem;
+			background: #fff;
+		}
+
+		@media (min-width: 400px){
+			.subcontent:nth-of-type(2){
+				height:70rem;
+			}
+
+			.subcontent:nth-of-type(3){
+				height:88rem;
+			}
+
+			#language-pie-chart{
+				width:100%;
+				height:40%;
+				align-self: flex-start;
+				flex-grow:0;
+			}
+
+			.legend{
+				height:40%;
+			}
+
+			.language-list li{
+				margin:2% 5%;
+			}
+
+			.language-percent-image{
+				width:35%;
+			}
+
+			.language-desc{
+				font-size: 2rem;
+			}
+
+			#software{
+				display:flex;
+				flex-direction: column;
+			}
+
+			#software h3{
+				align-self: center;
+				font-size: 3rem;
+				font-family:"Special Elite", cursive;
+				margin-bottom: 0;
+			}
+
+			#software ul{
+				padding:2%;
+				margin-top:0;
+				margin-bottom:0;
+			}
+
+			#software ul li{
+				width:25%;
+				font-size: 2rem;
+				font-family:"Poiret One", cursive;
+				font-weight: bold;
+			}
+
+			#side-projects li{
+				flex-direction:row;
+				height:12rem;
+				margin-bottom:1rem;
+			}
+
+			.project-image{
+				width:20%;
+			}
+
+			.project-description{
+				width:60%;
+			}
+		}
+	</style>
 </head>
-<body class="page">
+<body>
 	<svg version="1.1" style="display: none;"
 		 xmlns="http://www.w3.org/2000/svg" 
 		 xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -19,11 +269,16 @@
 		<symbol id="triangle-right-home" viewbox="0 0 10 20">
 			<path d="M0 0L10 10L0 20z" fill="#6553BD"></path>
 		</symbol>
+		<symbol id="arrow-down" viewbox="10 0 30 20">
+			<path d="M20 20L10 10" fill="transparent" stroke="#000" stroke-width="2"></path>
+			<path d="M20 20L30 10" fill="transparent" stroke="#000" stroke-width="2"></path>
+			<path d="M20 20V0" fill="transparent" stroke="#000" stroke-width="2"></path>
+		</symbol>
 	</svg>
 	<header class="main-nav center skills">
-		<a href="index.html" class="main-nav-icons boxshadow website-logo">
+		<a href="/" class="main-nav-icons boxshadow website-logo">
 		</a>
-		<a href="skills.html" class="main-nav-icons boxshadow">
+		<a href="/blog/" class="main-nav-icons boxshadow">
 			<svg class="icon triangle-left"><use xlink:href="#triangle-left-blog" /></svg>
 		</a>
 		<a href="#" class="main-nav-icons">
@@ -38,17 +293,37 @@
 				 </g>
 			</svg>
 		</a>
-		<a href="blog.html" class="main-nav-icons boxshadow">
+		<a href="/home/" class="main-nav-icons boxshadow">
 			<svg class="icon triangle-right"><use xlink:href="#triangle-right-home" /></svg>
 		</a>
 	</header>
-	<section class="content skills">
-		<figure id="languages">
-			<div class="language-pie-chart">
-				<svg xmlns="http://www.w3.org/2000/svg"
-					 xmlns:xlink="http://www.w3.org/1999/xlink"
-					 width="100%" height="100%" viewBox="0 0 36 36">
-					 <circle class="hole" cx="18" cy="18" r="15.91549430918952" 
+	<section class="content">
+		<section id="first-box" class="subcontent">
+			<section class="page-hero">
+				<h3>DEVELOPER SKILLS</h3>
+				<span>Learn More</span>
+				<a href="#second-box">
+					<svg class="icon"><use xlink:href="#arrow-down" /></svg>
+				</a>
+			</section>
+			<section class="page-hero">
+				<h3>PROJECTS</h3>
+				<span>Learn More</span>
+				<a href="#third-box">
+					<svg class="icon"><use xlink:href="#arrow-down" /></svg>
+				</a>
+			</section>
+		</section>
+		<section id="second-box" class="subcontent skills">
+			<!--<a href="#third-box">Go to the third box</a>-->
+			<!--<a href="#first-box">Go to the first box</a>-->
+			<div id="language-pie-chart">
+				<svg class="icon"
+					version="1.1"
+					 xmlns="http://www.w3.org/2000/svg" 
+					 xmlns:xlink="http://www.w3.org/1999/xlink" 
+					 viewbox="0 0 36 36">
+					<circle class="hole" cx="18" cy="18" r="15.91549430918952" 
 					 fill="#ffffff"></circle>
 					 <circle class="ring" cx="18" cy="18" r="15.91549430918952" 
 					 fill="transparent" stroke="#000000" stroke-width="3"></circle>
@@ -70,75 +345,69 @@
 					 fill="transparent" stroke="#8a8a5c" stroke-width="3" 
 					 stroke-dasharray="20 80" stroke-dashoffset="52"></circle>
 
-					 <g class="language-pie-chart-text">
-					 	<text class="inner-text" x="50%" y="50%">What I know</text>
+					 <g id="pie-chart-text">
+					 	<text id="inner-text" x="50%" y="50%">What I know</text>
 					 </g>
 				</svg>
 			</div>
-			<figcaption id="legend">
-				<ul>
-					<li class="to-sides">
+			<div class="legend">
+				<ul class="language-list">
+					<li>
 						<span class="language-percent-image java center"><p>16%</p></span>
-						<span class="language-desc text"><p>Java</p></span>
+						<span class="language-desc center"><p>Java</p></span>
 					</li>
-					<li class="to-sides">
+					<li>
 						<span class="language-percent-image python center"><p>40%</p></span>
-						<span class="language-desc text"><p>Python</p></span>
+						<span class="language-desc center"><p>Python</p></span>
 					</li>
-					<li class="to-sides">
+					<li>
 						<span class="language-percent-image ccplus center"><p>12%</p></span>
-						<span class="language-desc text"><p>C/C++</p></span>
+						<span class="language-desc center"><p>C/C++</p></span>
 					</li>
-					<li class="to-sides">
+					<li>
 						<span class="language-percent-image web center"><p>20%</p></span>
-						<span class="language-desc text"><p>HTML/CSS/JS</p></span>
+						<span class="language-desc center"><p>HTML/CSS/JS</p></span>
 					</li>
-					<li class="to-sides">
+					<li>
 						<span class="language-percent-image sql center"><p>12%</p></span>
-						<span class="language-desc text"><p>SQL</p></span>
+						<span class="language-desc center"><p>SQL</p></span>
 					</li>
 				</ul>
-			</figcaption>
-		</figure>
-		<section id="download-button">
-			<a href="https://drive.google.com/file/d/0Bzakom95GlgqaGFOWWVtcEtSTXc/view?usp=sharing" class="cv center">
-					<span id="download-button-text"><p>MY RESUME(PDF)</p></span>
-					<span class="resume-download-icon"></span>
-			</a>	
+			</div>
+			<div id="software">
+				<h3> Software Used </h3>
+				<ul>
+					<li>Flask</li>
+					<li>JQuery</li>
+					<li>Qt</li>
+					<li>Bootstrap</li>
+					<li>Android</li>
+					<li>React Native</li>
+				</ul>
+			</div>
 		</section>
-		<section class="toolbox">
-			<section class="center toolbox-software">
-				<h2>What I use</h2>
-				<ul>
-					<li class="center"><p>Flask</p></li>
-					<li class="center"><p>Qt</p></li>
-					<li class="center"><p>ReactJS/React Native</p></li>
-					<li class="center"><p>Git</p></li>
-					<li class="center"><p>Android</p></li>
-					<li class="center"><p>Docker</p></li>
-					<li class="center"><p>Bootstrap</li>
-				</ul>
-			</section>
-			<section class="center toolbox-projects">
-				<h2>What I have done</h2>
-				<ul>
-					<li class="to-sides">
-						<span class="project-image"></span>
-						<span class="project description">
-							<h3>Websites</h3>
-							<p></p>
-						</span>
-					</li>
-					<li class="to-sides">
-						<span class="project-image"></span>
-						<span class="project description">
-							<h2></h2>
-							<p></p>
-						</span>
-					</li>
-				</ul>
-			</section>
-		</section>	
+		<section id="third-box" class="subcontent skills">
+			<p class="space"></p>
+			<a href="#first-box">Top</a>
+			<h3> Personal </h3>
+			<ul id="side-projects">
+				<li>
+					<span class="project-image shadowbox"></span>
+					<span class="project-description shadowbox"></span>
+				</li>
+				<li>
+					<span class="project-image shadowbox"></span>
+					<span class="project-description shadowbox"></span>
+				</li>
+			</ul>
+			<h3>Contrib to Open Source</h3>
+			<ul id="side-projects">
+				<li>
+					<span class="project-image shadowbox"></span>
+					<span class="project-description shadowbox"></span>
+				</li>
+			</ul>
+		</section>
 	</section>
 </body>
 </html>

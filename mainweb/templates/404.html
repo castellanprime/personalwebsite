@@ -5,8 +5,78 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather" />
-	<link rel="stylesheet" type="text/css" href="../static/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Special+Elite|Poiret+One" />
+	<link rel="stylesheet" type="text/css" href="assets/css/website.css" />
+	<style type="text/css">
+		.not-found{
+			display:flex;
+			flex-direction: column;
+			height:70%;
+			width:70%;
+		}
+
+		.not-found h1{
+			font-size:5rem;
+			margin-bottom:1rem;
+			font-family:"Special Elite", cursive;
+		}
+
+		.page{
+			display:flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#sorry{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height:20%;
+			width:100%;
+			font-family:"Poiret One", cursive;
+			font-weight:bold;
+			font-size:1Srem;
+		}
+
+
+		#sorry-icon{
+			height:100%;
+			width:15%;
+			background:url('assets/img/sorry.png');
+			background-repeat:no-repeat;
+			background-size: contain;
+			background-position: center center;
+		}
+
+		@media(min-width:400px){
+			.not-found h1{
+				font-size:10rem;
+				margin-bottom:1rem;
+				font-family:"Special Elite", cursive;
+			}
+
+			#sorry{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height:20%;
+				width:100%;
+				font-family:"Poiret One", cursive;
+				font-weight:bold;
+				font-size:3rem;
+			}
+
+
+			#sorry-icon{
+				height:100%;
+				width:15%;
+				background:url('assets/img/sorry.png');
+				background-repeat:no-repeat;
+				background-size: contain;
+				background-position: center center;
+			}
+		}
+	</style>
 </head>
 <body class="page">
 	<section class="content center not-found">
