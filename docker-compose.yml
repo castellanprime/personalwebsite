@@ -13,7 +13,7 @@ services:
         links:
             - app
         volumes:
-            - ./mainweb/static:/usr/share/nginx/html
+            - ./mainweb/static:/usr/share/nginx/html/
         ports:
             - "80:8080"
 networks:
