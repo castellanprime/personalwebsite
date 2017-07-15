@@ -1,0 +1,158 @@
+/**
+ * Website.css
+ */
+
+
+/** CSS for all the pages */
+html, body{
+	height:100%;
+	margin:0;
+	padding:0;
+}
+
+body{
+	background: url('../img/bg_img.svg');
+	background-repeat:space;
+	background-attachment: fixed;
+	flex-direction: column;
+	display:flex;
+}
+
+.boxshadow{
+	-webkit-filter:drop-shadow(0 0 2.5rem rgba(0, 0, 0, 0.8));
+	-moz-filter: drop-shadow(0 0 2.5rem rgba(0, 0, 0, 0.8));
+	filter: drop-shadow(0 0 2.5rem rgba(0, 0, 0, 0.8));
+}
+
+.content{
+	width:100%;
+}
+
+.subcontent:nth-of-type(1){
+	height:22rem;
+}
+
+.subcontent:nth-of-type(2){
+	height:33rem;
+}
+
+.center{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.to-sides{
+	display:flex;
+	justify-content: space-between;
+}
+
+.hex{
+	cursor: pointer;
+	stroke:#000000;
+	stroke-width:0.2;
+}
+
+.icon{
+	width:100%;
+	height:100%;
+}
+
+.skills{
+	background:#9A53BD;
+}
+
+.blog{
+	background:#539ABD;
+}
+
+.home{
+	background:#6553BD; 
+}
+
+.main-nav{
+	height:10rem;
+	width:100%;
+	flex:none;
+}
+
+.main-nav-icons{
+	height:7rem;
+	width:20%;
+}
+
+.website-logo{
+	background:url('../img/website_logo.svg');
+	background-repeat:no-repeat;
+	background-size: contain;
+	background-position: center center;
+}
+
+.page-hero{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top:5%;
+	border:3px solid #000;
+	margin-right:10%;
+	margin-left:10%;
+}
+
+.page-hero h1, .page-hero h3{
+	align-self:flex-end;
+	font-family:"Special Elite", cursive;
+	margin-top:0.8rem;
+	margin-bottom:0.8rem;
+}
+
+.page-hero h1{
+	font-size:2.5rem;
+}
+
+.page-hero h3{
+	font-size:1.5rem;
+}
+
+.page-hero span{
+	align-self:center;
+	font-family:"Poiret One", cursive;
+	font-size:1rem;
+}
+
+.page-hero a{
+	align-self: center;
+	height:3rem;
+	width:2rem;
+}
+
+@media (min-width:400px){
+	.placeholder{
+		width:60%;
+		height:60%;
+	}
+
+	.subcontent:nth-of-type(1){
+		height:55rem;
+	}
+
+	.main-nav-icons{
+		height:9rem;
+	}
+
+	.page-hero{
+		margin-left:20%;
+		margin-right:20%;
+	}
+
+	.page-hero h1{
+		font-size: 8rem;
+	}
+
+	.page-hero h3{
+		font-size: 6rem;
+	}
+
+	.page-hero span{
+		font-size: 2rem;
+	}
+}
